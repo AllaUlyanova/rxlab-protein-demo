@@ -1,0 +1,427 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="robots" content="noindex, nofollow" data-publish>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>RX Lab – вкусный батончик с белком из знакомых ингредиентов</title>
+<meta name="description" content="Батончики RX Lab: шоколад с морской солью, шоколад с кофе и ягодный микс. Купить на маркетплейсе или получить оптовые условия от 100 штук.">
+<meta property="og:title" content="RX Lab – вкусный батончик с белком">
+<meta property="og:description" content="Три вкуса, знакомые ингредиенты. Розница – на маркетплейсе, опт – от 100 батончиков.">
+<meta property="og:image" content="assets/og.jpg">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%232a1810'/%3E%3Ctext x='16' y='22' font-size='16' font-family='Arial' font-weight='700' text-anchor='middle' fill='%23f2c14e'%3ERX%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=Instrument+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --cocoa:#2a1810; --cocoa-2:#3b2218;
+  --salt:#26475c; --coffee:#b8821f; --berry:#9c1a4c;
+  --sage:#dfe5d8; --paper:#f4f2ee; --ink:#1c1411; --muted:#6b5f58;
+  --gold:#f2c14e;
+  --f-display:"Bricolage Grotesque","Arial Narrow",Arial,sans-serif;
+  --f-body:"Instrument Sans",Arial,sans-serif;
+}
+*{box-sizing:border-box;margin:0}
+html{scroll-behavior:smooth;scroll-padding-top:72px}
+body{font:400 17px/1.55 var(--f-body);color:var(--ink);background:var(--paper);-webkit-font-smoothing:antialiased}
+img{display:block;max-width:100%}
+a{color:inherit}
+h1,h2,h3{font-family:var(--f-display);line-height:1.02;letter-spacing:-.02em}
+:focus-visible{outline:3px solid var(--gold);outline-offset:3px}
+.wrap{width:min(1180px,100% - 40px);margin-inline:auto}
+.btn{display:inline-flex;align-items:center;justify-content:center;min-height:48px;padding:0 26px;border-radius:999px;font:600 16px var(--f-body);text-decoration:none;border:2px solid transparent;cursor:pointer;transition:transform .15s,background .15s,color .15s}
+.btn:active{transform:scale(.97)}
+.btn-gold{background:var(--gold);color:var(--cocoa)}
+.btn-gold:hover{background:#ffd56e}
+.btn-line{border-color:currentColor;background:transparent}
+.btn-line:hover{background:rgba(255,255,255,.12)}
+
+/* header */
+.bar{position:fixed;inset:0 0 auto 0;z-index:20;background:rgba(42,24,16,.92);backdrop-filter:blur(8px);color:#fff}
+.bar .wrap{display:flex;align-items:center;gap:28px;height:64px}
+.logo{font:800 24px var(--f-display);letter-spacing:-.03em;text-decoration:none;color:var(--gold)}
+.logo i{font-style:normal;color:#fff}
+.nav{display:flex;gap:22px;margin-left:12px;flex:1}
+.nav a{text-decoration:none;font-size:15px;opacity:.85}
+.nav a:hover{opacity:1}
+.bar-cta{display:flex;gap:10px}
+.bar .btn{min-height:40px;padding:0 18px;font-size:14px}
+.burger{display:none;margin-left:auto;background:none;border:2px solid #fff;color:#fff;border-radius:10px;width:44px;height:44px;font-size:20px;cursor:pointer}
+
+/* hero */
+.hero{position:relative;min-height:100svh;background:var(--cocoa) url(assets/hero.webp) 70% center/cover no-repeat;color:#fff;display:flex;align-items:center;padding:110px 0 70px;overflow:hidden}
+.hero::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(42,24,16,.94) 0%,rgba(42,24,16,.72) 38%,rgba(42,24,16,0) 68%)}
+.hero .wrap{position:relative;z-index:2}
+.hero h1{font-size:clamp(42px,7.4vw,104px);font-weight:800;max-width:11ch}
+.hero p.sub{font-size:clamp(18px,2vw,23px);margin:22px 0 34px;max-width:30ch;opacity:.92}
+.hero .acts{display:flex;gap:14px;flex-wrap:wrap}
+.hero .facts{margin-top:44px;display:flex;gap:28px;flex-wrap:wrap;font-size:15px;opacity:.88}
+.hero .facts b{display:block;font:700 15px var(--f-display);color:var(--gold)}
+
+/* sections */
+section{padding:clamp(64px,9vw,120px) 0}
+.kick{font:600 14px var(--f-body);color:var(--muted);margin-bottom:14px}
+h2{font-size:clamp(32px,4.6vw,60px);font-weight:800;max-width:16ch}
+.lead{max-width:56ch;margin-top:18px;font-size:19px;color:#3d332d}
+
+/* ingredients */
+.ingr{background:var(--sage)}
+.ingr .grid{display:grid;grid-template-columns:1.05fr 1fr;gap:clamp(28px,5vw,70px);align-items:center}
+.ingr img{border-radius:28px;width:100%;aspect-ratio:4/3;object-fit:cover}
+.ingr ul{list-style:none;padding:0;margin-top:30px;display:grid;gap:0}
+.ingr li{padding:16px 0;border-top:1px solid rgba(28,20,17,.2);display:grid;grid-template-columns:130px 1fr;gap:18px}
+.ingr li:last-child{border-bottom:1px solid rgba(28,20,17,.2)}
+.ingr li strong{font:700 19px var(--f-display)}
+.ingr li span{color:#3d332d}
+
+/* flavors */
+.flavor{color:#fff;padding:clamp(56px,8vw,100px) 0}
+.flavor .grid{display:grid;grid-template-columns:1fr 1fr;gap:clamp(28px,5vw,80px);align-items:center}
+.flavor.rev .photo{order:2}
+.flavor .photo img{border-radius:28px;width:100%;aspect-ratio:4/5;object-fit:cover}
+.flavor h3{font-size:clamp(36px,5vw,68px);font-weight:800}
+.flavor p.d{margin:16px 0 26px;max-width:42ch;font-size:19px;opacity:.94}
+.packs{display:grid;gap:12px}
+.pack{display:grid;grid-template-columns:1fr auto;gap:14px;align-items:center;background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.28);border-radius:20px;padding:16px 18px}
+.pack b{font:700 22px var(--f-display);display:block}
+.pack small{opacity:.85;font-size:14px}
+.pack .btn{min-height:44px;padding:0 20px;font-size:15px}
+.btn.soon{background:rgba(255,255,255,.18);color:#fff;border-color:rgba(255,255,255,.45);cursor:default}
+details{margin-top:18px;border-top:1px solid rgba(255,255,255,.3);padding-top:14px}
+summary{cursor:pointer;font-weight:600;min-height:44px;display:flex;align-items:center;list-style:none}
+summary::-webkit-details-marker{display:none}
+summary::after{content:"+";margin-left:auto;font-size:24px;line-height:1}
+details[open] summary::after{content:"–"}
+details dl{display:grid;grid-template-columns:150px 1fr;gap:8px 16px;font-size:15px;padding:6px 0 4px}
+details dt{opacity:.75}
+.f-salt{background:var(--salt)} .f-coffee{background:var(--coffee);color:#1f1409} .f-coffee .pack{background:rgba(255,255,255,.28);border-color:rgba(31,20,9,.3)}
+.f-coffee .btn.soon{background:rgba(31,20,9,.12);color:#1f1409;border-color:rgba(31,20,9,.5)}
+.f-coffee details{border-color:rgba(31,20,9,.35)} .f-berry{background:var(--berry)}
+
+/* scenarios */
+.use .rows{display:grid;grid-template-columns:1.35fr 1fr;grid-template-rows:auto auto;gap:18px;margin-top:40px}
+.use .big{grid-row:span 2;position:relative;border-radius:28px;overflow:hidden;color:#fff;min-height:440px}
+.use .big img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.use .big::after{content:"";position:absolute;inset:0;background:linear-gradient(0deg,rgba(28,20,17,.8),rgba(28,20,17,0) 55%)}
+.use .big div{position:absolute;left:28px;right:28px;bottom:26px;z-index:2}
+.use h3{font-size:clamp(26px,3vw,38px);font-weight:800}
+.use .big p{margin-top:8px;max-width:38ch}
+.use .small{border-radius:28px;padding:28px;background:#fff;border:1px solid rgba(28,20,17,.12)}
+.use .small p{margin-top:8px;color:#3d332d}
+.note{font-size:14px;color:var(--muted);margin-top:20px;max-width:64ch}
+
+/* where to buy */
+.buy{background:var(--cocoa);color:#fff}
+.buy .shops{display:flex;gap:14px;flex-wrap:wrap;margin-top:30px}
+.shop{min-width:230px;padding:22px 24px;border-radius:22px;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.22)}
+.shop b{font:800 28px var(--f-display);display:block}
+.shop span{font-size:15px;opacity:.85;display:block;margin:2px 0 14px}
+
+/* partners */
+.partners{background:var(--paper)}
+.partners .grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:clamp(30px,5vw,80px);align-items:start}
+.lot{display:inline-block;margin-top:26px;padding:20px 26px;border-radius:22px;background:var(--cocoa);color:var(--gold)}
+.lot b{font:800 54px/1 var(--f-display);display:block}
+.lot span{color:#fff;font-size:15px}
+.who{list-style:none;padding:0;margin-top:26px;display:flex;flex-wrap:wrap;gap:8px}
+.who li{padding:8px 16px;border:1.5px solid var(--ink);border-radius:999px;font-size:15px}
+form{background:#fff;border-radius:28px;padding:clamp(22px,3vw,38px);border:1px solid rgba(28,20,17,.12);display:grid;gap:18px}
+.row2{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+label,legend{font:600 15px var(--f-body);display:block;margin-bottom:6px}
+.req::after{content:" *";color:var(--berry)}
+input[type=text],input[type=tel],input[type=email],select,textarea{width:100%;min-height:48px;font:400 17px var(--f-body);padding:10px 14px;border:1.5px solid #c8bfb7;border-radius:14px;background:#fff;color:var(--ink)}
+textarea{min-height:96px;resize:vertical}
+input:focus,select:focus,textarea:focus{border-color:var(--ink);outline:3px solid var(--gold);outline-offset:0}
+fieldset{border:0;padding:0;min-width:0}
+.hint{font-size:14px;color:var(--muted);margin-top:6px}
+.opts{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:8px}
+.opts label{display:flex;align-items:center;gap:10px;min-height:48px;padding:0 14px;border:1.5px solid #c8bfb7;border-radius:14px;font-weight:500;cursor:pointer;margin:0}
+.opts input{width:20px;height:20px;accent-color:var(--cocoa)}
+.opts label:has(input:checked){border-color:var(--ink);background:var(--sage)}
+.consent{display:flex;gap:12px;align-items:flex-start;font-weight:400;font-size:15px}
+.consent input{width:22px;height:22px;margin-top:2px;accent-color:var(--cocoa);flex:none}
+.err{color:#b3261e;font-size:14px;margin-top:6px;min-height:0}
+.bad{border-color:#b3261e!important}
+.send{width:100%;min-height:56px;font-size:18px;background:var(--cocoa);color:var(--gold);border:0}
+.send:disabled{opacity:.6;cursor:wait}
+.ok{display:none;padding:20px;border-radius:18px;background:var(--sage);font-weight:600}
+.demo{font-size:13px;color:var(--muted)}
+
+/* faq + footer */
+.faq details{border-color:rgba(28,20,17,.25);margin:0;padding:6px 0}
+.faq summary{font:700 20px var(--f-display);min-height:56px}
+.faq details p{padding:0 0 16px;max-width:64ch;color:#3d332d}
+.faq .wrap{max-width:860px}
+footer{background:var(--cocoa);color:#fff;padding:56px 0 36px;font-size:15px}
+footer .cols{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:30px}
+footer h4{font:700 16px var(--f-display);color:var(--gold);margin-bottom:10px}
+footer a{display:block;opacity:.85;text-decoration:none;margin:6px 0}
+footer a:hover{opacity:1;text-decoration:underline}
+footer .logo{font-size:32px}
+.legal{margin-top:36px;padding-top:18px;border-top:1px solid rgba(255,255,255,.2);opacity:.7;font-size:13px}
+
+@media (max-width:860px){
+  .nav,.bar-cta{display:none}
+  .burger{display:block}
+  .bar.open .nav{display:flex;position:absolute;top:64px;left:0;right:0;background:var(--cocoa);flex-direction:column;gap:0;margin:0;padding:8px 20px 20px}
+  .bar.open .nav a{padding:14px 0;border-bottom:1px solid rgba(255,255,255,.15);font-size:17px}
+  .hero{background-position:62% center}
+  .hero::after{background:linear-gradient(180deg,rgba(42,24,16,.88) 0%,rgba(42,24,16,.55) 55%,rgba(42,24,16,.15) 100%)}
+  .ingr .grid,.flavor .grid,.partners .grid,.use .rows,footer .cols{grid-template-columns:1fr}
+  .flavor.rev .photo{order:0}
+  .flavor .photo img{aspect-ratio:4/3}
+  .use .big{grid-row:auto;min-height:340px}
+  .ingr li{grid-template-columns:1fr;gap:2px}
+  .row2,.opts{grid-template-columns:1fr}
+  details dl{grid-template-columns:1fr}
+}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}.btn{transition:none}}
+</style>
+</head>
+<body>
+
+<header class="bar" id="bar">
+  <div class="wrap">
+    <a class="logo" href="#top" aria-label="RX Lab – на главную">RX<i> Lab</i></a>
+    <nav class="nav" aria-label="Основное меню">
+      <a href="#sostav">Состав</a>
+      <a href="#vkusy">Вкусы</a>
+      <a href="#brand">О бренде</a>
+      <a href="#partners">Партнёрам</a>
+      <a href="#kontakty">Контакты</a>
+    </nav>
+    <div class="bar-cta">
+      <a class="btn btn-line" href="#gde-kupit">Купить</a>
+      <a class="btn btn-gold" href="#partners">Купить оптом</a>
+    </div>
+    <button class="burger" id="burger" aria-label="Открыть меню" aria-expanded="false">☰</button>
+  </div>
+</header>
+
+<main id="top">
+
+<section class="hero" aria-labelledby="h1">
+  <div class="wrap">
+    <h1 id="h1">Вкусный батончик с белком из знакомых ингредиентов</h1>
+    <p class="sub">К кофе, с собой и для насыщенного дня</p>
+    <div class="acts">
+      <a class="btn btn-gold" href="#gde-kupit">Купить</a>
+      <a class="btn btn-line" href="#partners">Купить оптом</a>
+    </div>
+    <div class="facts">
+      <span><b>3 вкуса</b>шоколад, кофе, ягоды</span>
+      <span><b>Боксы по 4 и 10 шт.</b>один вкус в боксе</span>
+      <span><b>Опт от 100 шт.</b>условия – по заявке</span>
+    </div>
+  </div>
+</section>
+
+<section class="ingr" id="sostav" aria-labelledby="h-sostav">
+  <div class="wrap grid">
+    <div>
+      <p class="kick">Состав</p>
+      <h2 id="h-sostav">Всё, что можно узнать на кухне</h2>
+      <p class="lead">Финики, орехи, яичный белок. Мы не прячем состав за громкими словами: что в батончике, то и на фото.</p>
+      <ul>
+        <li><strong>Финики</strong><span>Дают мягкую сладость и вязкую текстуру вместо сахарного сиропа.</span></li>
+        <li><strong>Орехи</strong><span>Хруст и плотность. Подробный набор зависит от вкуса.</span></li>
+        <li><strong>Яичный белок</strong><span>Источник белка: батончик не десерт, а сытная замена перекусу.</span></li>
+        <li><strong>Вкусовая основа</strong><span>Какао и соль, кофе, ягоды – у каждого вкуса свои.</span></li>
+      </ul>
+    </div>
+    <img src="assets/ingredients.webp" width="1400" height="1050" loading="lazy" alt="Финики, орехи, какао-бобы, ягоды и яичный белок на светлой бумаге">
+  </div>
+</section>
+
+<div id="vkusy">
+
+<section class="flavor f-salt" aria-labelledby="h-salt">
+  <div class="wrap grid">
+    <div class="photo"><img src="assets/salt.webp" width="1000" height="1250" loading="lazy" alt="Батончик в шоколаде с хлопьями морской соли, откушенный край"></div>
+    <div>
+      <p class="kick" style="color:rgba(255,255,255,.75)">Вкус 1</p>
+      <h3 id="h-salt">Шоколад – морская соль</h3>
+      <p class="d">Плотный шоколад и щепотка соли. Для тех, кто любит сладкое, но без приторности.</p>
+      <div class="packs">
+        <div class="pack"><div><b>Бокс 4 батончика</b><small>Один вкус в боксе</small></div><a class="btn soon" data-wb="" href="#gde-kupit" aria-label="Шоколад – морская соль, 4 шт.: ссылка на WB скоро">WB – скоро</a></div>
+        <div class="pack"><div><b>Бокс 10 батончиков</b><small>Один вкус в боксе</small></div><a class="btn soon" data-wb="" href="#gde-kupit" aria-label="Шоколад – морская соль, 10 шт.: ссылка на WB скоро">WB – скоро</a></div>
+      </div>
+      <details><summary>Состав, КБЖУ, хранение</summary>
+        <dl><dt>Состав</dt><dd>{{состав}} – данные утверждает заказчик</dd><dt>Аллергены</dt><dd>{{аллергены}}</dd><dt>Масса батончика</dt><dd>{{масса}}</dd><dt>КБЖУ</dt><dd>на батончик и на 100 г: {{кбжу}}</dd><dt>Срок и хранение</dt><dd>{{срок-годности}}</dd></dl>
+      </details>
+    </div>
+  </div>
+</section>
+
+<section class="flavor f-coffee rev" aria-labelledby="h-coffee">
+  <div class="wrap grid">
+    <div class="photo"><img src="assets/coffee.webp" width="1000" height="1250" loading="lazy" alt="Кофейный шоколадный батончик на блюдце с чашкой эспрессо"></div>
+    <div>
+      <p class="kick" style="color:rgba(31,20,9,.7)">Вкус 2</p>
+      <h3 id="h-coffee">Шоколад – кофе</h3>
+      <p class="d">Горчинка кофе внутри шоколада. Вместо десерта к чашке эспрессо или капучино.</p>
+      <div class="packs">
+        <div class="pack"><div><b>Бокс 4 батончика</b><small>Один вкус в боксе</small></div><a class="btn soon" data-wb="" href="#gde-kupit" aria-label="Шоколад – кофе, 4 шт.: ссылка на WB скоро">WB – скоро</a></div>
+        <div class="pack"><div><b>Бокс 10 батончиков</b><small>Один вкус в боксе</small></div><a class="btn soon" data-wb="" href="#gde-kupit" aria-label="Шоколад – кофе, 10 шт.: ссылка на WB скоро">WB – скоро</a></div>
+      </div>
+      <details><summary>Состав, КБЖУ, хранение</summary>
+        <dl><dt>Состав</dt><dd>{{состав}} – данные утверждает заказчик</dd><dt>Аллергены</dt><dd>{{аллергены}}</dd><dt>Масса батончика</dt><dd>{{масса}}</dd><dt>КБЖУ</dt><dd>на батончик и на 100 г: {{кбжу}}</dd><dt>Срок и хранение</dt><dd>{{срок-годности}}</dd></dl>
+      </details>
+    </div>
+  </div>
+</section>
+
+<section class="flavor f-berry" aria-labelledby="h-berry">
+  <div class="wrap grid">
+    <div class="photo"><img src="assets/berry.webp" width="1000" height="1250" loading="lazy" alt="Ягодный батончик в разрезе, рядом малина и черника"></div>
+    <div>
+      <p class="kick" style="color:rgba(255,255,255,.75)">Вкус 3</p>
+      <h3 id="h-berry">Ягодный микс</h3>
+      <p class="d">Кисловатая ягодная начинка и мягкая основа. Самый яркий из трёх.</p>
+      <div class="packs">
+        <div class="pack"><div><b>Бокс 4 батончика</b><small>Один вкус в боксе</small></div><a class="btn soon" data-wb="" href="#gde-kupit" aria-label="Ягодный микс, 4 шт.: ссылка на WB скоро">WB – скоро</a></div>
+        <div class="pack"><div><b>Бокс 10 батончиков</b><small>Один вкус в боксе</small></div><a class="btn soon" data-wb="" href="#gde-kupit" aria-label="Ягодный микс, 10 шт.: ссылка на WB скоро">WB – скоро</a></div>
+      </div>
+      <details><summary>Состав, КБЖУ, хранение</summary>
+        <dl><dt>Состав</dt><dd>{{состав}} – данные утверждает заказчик</dd><dt>Аллергены</dt><dd>{{аллергены}}</dd><dt>Масса батончика</dt><dd>{{масса}}</dd><dt>КБЖУ</dt><dd>на батончик и на 100 г: {{кбжу}}</dd><dt>Срок и хранение</dt><dd>{{срок-годности}}</dd></dl>
+      </details>
+    </div>
+  </div>
+</section>
+
+</div>
+
+<section class="use" id="brand" aria-labelledby="h-use">
+  <div class="wrap">
+    <p class="kick">Когда есть</p>
+    <h2 id="h-use">Вместо десерта. И не только</h2>
+    <div class="rows">
+      <article class="big">
+        <img src="assets/coffee.webp" width="1000" height="1250" loading="lazy" alt="Батончик и чашка кофе">
+        <div><h3>К кофе или чаю</h3><p>Сладкое к чашке, после которого не жалеешь. Главный сценарий RX Lab.</p></div>
+      </article>
+      <article class="small"><h3>Перекус на весь день</h3><p>Лежит в сумке, не крошится и не просит тарелки.</p></article>
+      <article class="small"><h3>Рядом с тренировкой</h3><p>Можно взять с собой в зал. Это удобный формат, а не схема питания и не обещание результата.</p></article>
+    </div>
+    <p class="note">Миссия бренда: давать людям энергию, создавая вкусный продукт из знакомых ингредиентов.</p>
+  </div>
+</section>
+
+<section class="buy" id="gde-kupit" aria-labelledby="h-buy">
+  <div class="wrap">
+    <p class="kick" style="color:rgba(255,255,255,.7)">Розница</p>
+    <h2 id="h-buy">Где купить</h2>
+    <p class="lead" style="color:#fff;opacity:.9">Пока батончики продаются на Wildberries. Ссылки на каждый бокс появятся, как только карточки будут готовы.</p>
+    <div class="shops">
+      <div class="shop"><b>Wildberries</b><span>Шесть боксов: 3 вкуса по 4 и 10 шт.</span><a class="btn btn-gold" href="#" data-wb="" aria-disabled="true" onclick="return false">Ссылка появится позже</a></div>
+    </div>
+  </div>
+</section>
+
+<section class="partners" id="partners" aria-labelledby="h-par">
+  <div class="wrap grid">
+    <div>
+      <p class="kick">Партнёрам</p>
+      <h2 id="h-par">Хотите продавать RX Lab?</h2>
+      <p class="lead">Обсудим поставки для вашего бизнеса. Оставьте заявку, чтобы получить условия сотрудничества.</p>
+      <div class="lot"><b>100</b><span>батончиков – минимальный оптовый заказ.<br>Это размер партии, а не обязательный объём продаж в месяц.</span></div>
+      <ul class="who" aria-label="Кому подходит">
+        <li>Дистрибьюторы</li><li>Кофейни</li><li>Фитнес-клубы</li><li>Магазины и сети</li><li>Вендинг</li>
+      </ul>
+    </div>
+
+    <form id="lead" novalidate aria-labelledby="h-par">
+      <div class="row2">
+        <div><label class="req" for="f-name">Имя</label><input type="text" id="f-name" name="name" autocomplete="name"><div class="err" id="e-name"></div></div>
+        <div><label class="req" for="f-comp">Компания или проект</label><input type="text" id="f-comp" name="company" autocomplete="organization"><div class="err" id="e-comp"></div></div>
+      </div>
+      <div class="row2">
+        <div><label class="req" for="f-city">Город или регион поставки</label><input type="text" id="f-city" name="city" autocomplete="address-level2"><div class="err" id="e-city"></div></div>
+        <div><label class="req" for="f-type">Тип бизнеса</label>
+          <select id="f-type" name="type"><option value="">Выберите</option><option>Дистрибьютор</option><option>Кофейня</option><option>Фитнес-клуб</option><option>Магазин или торговая сеть</option><option>Вендинг</option><option>Другое</option></select><div class="err" id="e-type"></div></div>
+      </div>
+      <fieldset>
+        <legend class="req">Планируемые продажи в месяц</legend>
+        <div class="opts">
+          <label><input type="radio" name="vol" value="менее 100 шт."> менее 100 шт.</label>
+          <label><input type="radio" name="vol" value="100–499 шт."> 100–499 шт.</label>
+          <label><input type="radio" name="vol" value="500–999 шт."> 500–999 шт.</label>
+          <label><input type="radio" name="vol" value="1 000 шт. и более"> 1 000 шт. и более</label>
+        </div>
+        <div class="hint">Оценка ежемесячных продаж. Минимальный заказ – 100 шт.</div>
+        <div class="err" id="e-vol"></div>
+      </fieldset>
+      <div class="row2">
+        <div><label for="f-tel">Телефон</label><input type="tel" id="f-tel" name="tel" autocomplete="tel" placeholder="+7 ___ ___-__-__"></div>
+        <div><label for="f-mes">Telegram или другой мессенджер</label><input type="text" id="f-mes" name="mes" placeholder="@username"></div>
+      </div>
+      <div class="hint" style="margin-top:-8px">Нужен хотя бы телефон или мессенджер. Укажите @username либо название мессенджера и номер телефона.</div>
+      <div class="err" id="e-contact" style="margin-top:-12px"></div>
+      <div><label for="f-mail">Email <span style="font-weight:400;color:var(--muted)">(по желанию)</span></label><input type="email" id="f-mail" name="email" autocomplete="email"><div class="err" id="e-mail"></div></div>
+      <div><label for="f-msg">Комментарий <span style="font-weight:400;color:var(--muted)">(по желанию)</span></label><textarea id="f-msg" name="msg"></textarea></div>
+      <div>
+        <label class="consent"><input type="checkbox" id="f-ok" name="ok"> <span>Согласен на обработку персональных данных и с <a href="policy.html" target="_blank" rel="noopener">политикой обработки</a> и <a href="consent.html" target="_blank" rel="noopener">текстом согласия</a></span></label>
+        <div class="err" id="e-ok"></div>
+      </div>
+      <button class="btn send" type="submit" id="send">Получить оптовые условия</button>
+      <div class="ok" id="done" role="status">Спасибо! Заявка получена. Свяжемся с вами, чтобы обсудить сотрудничество.</div>
+      <p class="demo">Демо-версия: заявка никуда не отправляется. В боевом сайте заявки приходят на email заказчика и сохраняются в Tilda.</p>
+    </form>
+  </div>
+</section>
+
+<section class="faq" aria-labelledby="h-faq">
+  <div class="wrap">
+    <p class="kick">Вопросы</p>
+    <h2 id="h-faq" style="margin-bottom:26px">Коротко о главном</h2>
+    <details><summary>Из чего сделаны батончики?</summary><p>Из знакомых ингредиентов: финики, орехи, яичный белок и вкусовая основа. Точный состав каждого вкуса – в карточке бокса, в разделе «Состав, КБЖУ, хранение».</p></details>
+    <details><summary>Есть ли аллергены?</summary><p>Да, в составе орехи и яичный белок. Полный список аллергенов по каждому вкусу указан в карточке: {{аллергены}}.</p></details>
+    <details><summary>Как хранить и сколько?</summary><p>Срок годности и условия хранения указаны на упаковке и в карточке бокса: {{срок-годности}}.</p></details>
+    <details><summary>Как купить в розницу?</summary><p>На Wildberries. Выберите вкус и размер бокса – 4 или 10 батончиков, и кнопка откроет нужную карточку. Ссылки появятся вместе с запуском карточек.</p></details>
+    <details><summary>Какая минимальная партия для опта?</summary><p>100 батончиков. Оптовые цены не публикуются: условия отправляем после заявки.</p></details>
+  </div>
+</section>
+
+</main>
+
+<footer id="kontakty">
+  <div class="wrap">
+    <div class="cols">
+      <div><a class="logo" href="#top">RX<i> Lab</i></a><p style="margin-top:10px;opacity:.8;max-width:30ch">Вкусный батончик с белком из знакомых ингредиентов.</p></div>
+      <div><h4>Контакты</h4><span>{{телефон}}</span><span style="display:block;margin-top:6px">{{email}}</span><span style="display:block;margin-top:6px">{{соцсети}}</span></div>
+      <div><h4>Документы</h4><a href="policy.html">Политика обработки данных</a><a href="consent.html">Согласие на обработку</a><a href="#partners">Оптовые условия</a></div>
+    </div>
+    <p class="legal">{{реквизиты продавца}} · Демо-версия сайта, тексты согласуются с заказчиком перед публикацией. Фото батончиков сгенерированы для макета, настоящие фото боксов заказчик передаст отдельно.</p>
+  </div>
+</footer>
+
+<script>
+(function(){
+  var bar=document.getElementById('bar'),b=document.getElementById('burger');
+  b.addEventListener('click',function(){var o=bar.classList.toggle('open');b.setAttribute('aria-expanded',o);b.textContent=o?'✕':'☰'});
+  bar.querySelectorAll('.nav a').forEach(function(a){a.addEventListener('click',function(){bar.classList.remove('open');b.textContent='☰';b.setAttribute('aria-expanded',false)})});
+
+  var f=document.getElementById('lead'),$=function(i){return document.getElementById(i)};
+  function err(id,msg,field){$(id).textContent=msg||'';if(field)field.classList.toggle('bad',!!msg)}
+  f.addEventListener('submit',function(e){
+    e.preventDefault();
+    var bad=0,first=null;
+    function need(v,id,msg,fld){if(!v.trim()){err(id,msg,fld);bad++;first=first||fld;}else err(id,'',fld)}
+    need($('f-name').value,'e-name','Укажите имя',$('f-name'));
+    need($('f-comp').value,'e-comp','Укажите компанию или проект',$('f-comp'));
+    need($('f-city').value,'e-city','Укажите город или регион',$('f-city'));
+    if(!$('f-type').value){err('e-type','Выберите тип бизнеса',$('f-type'));bad++;first=first||$('f-type')}else err('e-type','',$('f-type'));
+    if(!f.vol.value){err('e-vol','Выберите вариант');bad++;first=first||f.querySelector('input[name=vol]')}else err('e-vol','');
+    if(!$('f-tel').value.trim()&&!$('f-mes').value.trim()){err('e-contact','Укажите телефон или мессенджер');bad++;first=first||$('f-tel')}else err('e-contact','');
+    var m=$('f-mail').value.trim();
+    if(m&&!/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(m)){err('e-mail','Проверьте email: похоже, в адресе ошибка',$('f-mail'));bad++;first=first||$('f-mail')}else err('e-mail','',$('f-mail'));
+    if(!$('f-ok').checked){err('e-ok','Нужно согласие на обработку данных');bad++;first=first||$('f-ok')}else err('e-ok','');
+    if(bad){first&&first.focus();return}
+    var s=$('send');s.disabled=true;s.textContent='Отправляем…';
+    setTimeout(function(){s.style.display='none';$('done').style.display='block';$('done').focus&&$('done').setAttribute('tabindex','-1');$('done').focus()},700);
+  });
+})();
+</script>
+</body>
+</html>
