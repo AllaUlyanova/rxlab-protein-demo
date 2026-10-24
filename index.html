@@ -177,6 +177,14 @@ footer .logo{font-size:32px}
   details dl{grid-template-columns:1fr}
 }
 @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}.btn{transition:none}}
+/* широкие экраны: масштабируем всю страницу, чтобы текст не терялся */
+body{--z:1}
+.hero{min-height:calc(100svh / var(--z))}
+@media (min-width:1700px){body{--z:1.25;zoom:1.25}.hero h1{font-size:80px;max-width:12ch}.hero{padding:96px 0 56px}}
+@media (min-width:2000px){body{--z:1.5;zoom:1.5}}
+@media (min-width:2500px){body{--z:1.9;zoom:1.9}}
+@media (min-width:3200px){body{--z:2.4;zoom:2.4}}
+@media (min-width:3900px){body{--z:3;zoom:3}}
 </style>
 </head>
 <body>
